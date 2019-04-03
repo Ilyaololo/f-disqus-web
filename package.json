@@ -38,7 +38,7 @@
       }
     },
     "serve": {
-      "command": "serve --listen $PORT public/",
+      "command": "serve --listen $PORT dist/",
       "env": {}
     }
   },
