@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 10
+cache: yarn
+script:
+  - yarn run build
+deploy:
+  provider: heroku
+  api_key:
+    secure: XhZHbKcyB93C7K8uaZzQD5ZZad3PgBR7Il2Pwn8dcZ93S6kRa0zSlsJpojJkcnbrvbHln1aKAhRiUVI2Fe/kmIliqJSEHHQESa6jo64Ru7Pmjak+fpVCJLZzSof2tP5WYSjqbyRJRk/r0pUURnEtw+MP/XlPajQ0ruLr9yXndlXrz/Yn7IKqum+fpp8/ZRWxUEL8j2BBllRJ1FrBfH7PZaBiacX1o9Kt2Fs5CuEokAcS/Nt22RDgJagVk2LWAVagsaIy1mKSVd0AEncBpCuQHkDzFO5SLcGvoxhn2gXmicKoJoBoxrhYFihMHyECtWxB5koHeQ3bZZ0xz0AEfVQSMxXllmyAlXbfsmUvOljcFF79Invr0lxmwxaybOOUEC9lxb0pYsn3uOgLFBE2OqRCid6g5Loi1EIeNifR7Sdp+TX4AAsE5n9t0SN3X8lWb65F4lPxqH8tNb7k0qbdlJ+AGq1tI0qIQ1paBjvuhqMFheINPSHCwX6xNgM3kROB6tOn/8IkqRbuQAtyFwMa3XgKH5142gVT9dMZvg+5gIEoIAV5Zy2KTIhinGQ8xKIoz772jJM0F0MsPM8H1IUebStLL9D8cETKNQMVhOZrBEr6y1w5GMm7Sbi6JeH7tqNriiwpxuG/rncCe8nyS22N+Za5t2fxoxA1sGwcqLry8SdQMkM=
+  skip_cleanup: true
+  app: f-disqus-web
+  on:
+    repo: Ilyaololo/f-disqus-web
