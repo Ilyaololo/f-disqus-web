@@ -1,5 +1,6 @@
 import * as path from 'path';
 
+import * as webpack from 'webpack';
 import { Config } from 'webpack-config';
 
 import CleanWebpackPlugin from 'clean-webpack-plugin';
@@ -125,6 +126,10 @@ const configuration = new Config()
 
     plugins: [
       new Dotenv(),
+
+      new webpack.EnvironmentPlugin([
+        'ORIGIN_HOST',
+      ]),
 
       new CleanWebpackPlugin({
         cleanStaleWebpackAssets: false,
